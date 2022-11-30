@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Greeting, UserCard } from "./Greeting";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <>
+    <Greeting />
+    <UserCard
+      name="Rafael Hilario"
+      amount={5000}
+      married={true}
+      points={[84, 98.5, 52]}
+      address={{
+        street: "Duarte",
+        city: "Santo Domingo",
+        zipCode: "1498",
+      }}
+    />
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <UserCard
+      name="Jose Torres"
+      amount={5000}
+      married={true}
+      points={[84, 98.5, 52]}
+      address={{
+        street: "Duarte",
+        city: "Santo Domingo",
+        zipCode: "1498",
+      }}
+    />
+  </>
+); /*Etiquetas de auto cerrrado*/
